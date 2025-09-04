@@ -1,9 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17525892102"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17525892102');
+</script>
+
+<!-- Event snippet for 注册 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17525892102/3-dcCOO_uZMbEIbI_6RB',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+	
 <script>
 function ya2() { 
-            window.open('https://wa.me/your-whatsapp-number', '_blank');
+	gtag_report_conversion('https://bullgrocer.com/Sy'); 
         }
 </script>
     <meta charset="UTF-8">
@@ -1050,4 +1078,5 @@ function ya2() {
         setInterval(updateViewerCount, 1000);
     </script>
 </body>
+
 </html>
