@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<script>
+ function d2() {
+            window.open('https://wa.me/11111111111', '_blank');
+        }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Ammattimainen Osakesijoitusanalyysi - Asiantuntija Kaupankäyntiyhteisö</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .breathing {
+            animation: breathing 2s ease-in-out infinite;
+        }
+        
+        @keyframes breathing {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #ef4444, #dc2626);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(239, 68, 68, 0.4);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: #25d366;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 80%;
+            max-width: 300px;
+        }
+        
+        .floating-btn button {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ef4444;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                right: 15px;
+                width: 50px;
+                height: 50px;
+            }
+            .floating-btn {
+                width: 90%;
+                bottom: 15px;
+            }
+            .floating-btn button {
+                font-size: 14px;
+                padding: 12px 16px;
+            }
+            .floating-btn span {
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+    <!-- Header Section -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                Ammattimainen Sijoitusanalyysi
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Oletko edelleen huolissasi markkinatappioista? Tiimimme koostuu ammattimaisista analyytikoista, jotka tarjoavat ilmaisia verkkopalveluita. Kommunikoimme ja teemme yhteistyötä joka päivä. Kyllä, olemme rahoitusalalla. Haluatko muutosta? Haluatko elää onnellista elämää?
+            </p>
+        </div>
+        
+        <div class="flex justify-center mb-12">
+            <img src="img/1.jpg" alt="Ammattimainen Talousanalyytikko" class="rounded-lg shadow-2xl max-w-md w-full">
+        </div>
+        
+        <div class="text-center">
+            <button onclick="d2()" class="btn-primary px-8 py-4 rounded-full text-white font-semibold text-lg inline-flex items-center space-x-2">
+                <i class="fab fa-whatsapp text-2xl"></i>
+                <span>Lisää WhatsApp Välittömästi</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="bg-slate-800/50 py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Älykkäämpään, Nopeampaan Liiketoimintaan</h2>
+                <p class="text-xl text-gray-300">
+                    Näytämme jokaiselle sijoittajalle, kuinka voittaa tekniset haasteet ja käyttää tekoälyä suorituskyvyn parantamiseen!
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-slate-700/50 p-6 rounded-lg">
+                    <div class="text-center">
+                        <div class="bg-red-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-chart-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Sijoitustrendien Analyysi!</h3>
+                        <p class="text-gray-300">Kaavioiden tarkastelu tarjoaa sijoittajille kannattavia sijoitusvinkkejä, joita jopa aloittelijat voivat oppia!</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-slate-700/50 p-6 rounded-lg">
+                    <div class="text-center">
+                        <div class="bg-red-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bell text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Reaaliaikaiset Hälytykset</h3>
+                        <p class="text-gray-300">Koulutus ammattimaisilta analyytikoilta syvällä kokemuksella, yhdistettynä tekoälyyn, tukee kaupankäyntiä ja varmistaa voiton maksimoimisen monilla markkinoilla!</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-slate-700/50 p-6 rounded-lg">
+                    <div class="text-center">
+                        <div class="bg-red-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-coins text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Luo Oma Osingonsaajasalkkusi</h3>
+                        <p class="text-gray-300">Ilmaista. Jaa yhdestä kolmeen menestystarinoihin joka päivä! Tavoiteprotokollani koskee tablettia, ilmaisia ja eksklusiivisia premium-analyytikoita.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stock Management Section -->
+    <div class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-xl text-gray-300 mb-8">
+                    Kyllä, olemme yksi heistä. Laadukkaiden osakkeennostajien määrä osakemarkkinafoorumeilla on kasvussa. Osakekurssit vaihtelevat arkipäivien ja perjantain välillä. Puhutaan tänään varastonhallinta-analyysistä.
+                </p>
+                <img src="img/2.jpg" alt="Osakeanalyysi" class="rounded-lg shadow-2xl max-w-md w-full mx-auto mb-8">
+                <button onclick="d2()" class="btn-primary px-8 py-4 rounded-full text-white font-semibold text-lg inline-flex items-center space-x-2">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>Lisää WhatsApp Välittömästi</span>
+                </button>
+            </div>
+            
+            <div class="bg-yellow-500/20 p-6 rounded-lg border border-yellow-500/50 mb-12">
+                <p class="text-center text-lg">
+                    <strong>Huomautus:</strong> Tämä on yksityinen ryhmämme. Keskustelemme vain osakkeista ja sijoituskokemuksista. Jakaminen on tärkeää! Jos et ole osakesijoittaja, älä hakeudu!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="bg-slate-800/50 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Miksi Suosittelemme Näitä Suosituimpia Toimintoja?</h2>
+            <p class="text-xl text-center text-gray-300 mb-12">Meillä on kymmenen vuoden teknisen analyysin kokemus ja olemme hyvin kokeneita. Reaaliaikainen videon toisto!</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-hover bg-slate-700/50 p-6 rounded-lg text-center">
+                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-arrow-up text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Lisää Mahdollisuuksiasi</h3>
+                    <p class="text-gray-300">Laajenna kaupankäyntiäsi ja sijoittamistasi, sopeutuen markkinamuutoksiin.</p>
+                </div>
+                
+                <div class="card-hover bg-slate-700/50 p-6 rounded-lg text-center">
+                    <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Vähennä Riskiä</h3>
+                    <p class="text-gray-300">Käyttämällä ammattimaista järjestelmäämme ja keskittymällä laserin tarkkuuteen, voit saada suoria liiketoimintahyötyjä.</p>
+                </div>
+                
+                <div class="card-hover bg-slate-700/50 p-6 rounded-lg text-center">
+                    <div class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Kaupankäynti Psykologia</h3>
+                    <p class="text-gray-300">Hyödyntämällä selkeitä markkinasignaalejamme, emotionaaliset vaihtelut voidaan eliminoida.</p>
+                </div>
+                
+                <div class="card-hover bg-slate-700/50 p-6 rounded-lg text-center">
+                    <div class="bg-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-pie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Seuraa Sijoituksiasi</h3>
+                    <p class="text-gray-300">Varallisuudella on oma merkityksensä, mutta sen tavoittelu ei ole helppoa. Tiimimme voi auttaa sinua.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Long-term Partnership Section -->
+    <div class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <img src="img/3.jpg" alt="Pitkäaikainen Kumppanuus" class="rounded-lg shadow-2xl max-w-md w-full mx-auto mb-8">
+                <h2 class="text-3xl font-bold mb-6">Kun Löydämme Oikean Suunnan, Seuraamme Sinua Vuosikymmeniä</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Yksityishenkilöt, perheet ja muut auttavat sinua saavuttamaan ihanteelliset taloudelliset tavoitteesi. Tämä on ratkaisevan tärkeää. Varallisuus löytää lopulta merkityksensä: sinun merkityksesi.
+                </p>
+                <img src="img/4.jpg" alt="Strategian Toteutus" class="rounded-lg shadow-2xl max-w-md w-full mx-auto mb-8">
+                <p class="text-xl text-gray-300">
+                    Käänteisstrategia, valmis. Miksi talous kasvaa mutta osakemarkkinat laskevat? Ehkä sinun pitäisi oppia osakekaupankäyntiä mestareiltasi. Voitto osakekaupankäynnin kautta.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7 Steps Section -->
+    <div class="bg-slate-800/50 py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-6">Osaketutkimus Auttaa Sinua Hallitsemaan Osakemarkkinoita</h2>
+                <p class="text-xl text-gray-300 mb-8">Olemme koonneet seitsemän askelta tehdäksemme sinusta voittajan - menestyvän kauppiaan:</p>
+                <img src="img/5.jpg" alt="Seitsemän Askelta Menestykseen" class="rounded-lg shadow-2xl max-w-md w-full mx-auto mb-8">
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-700/50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold">1</span>
+                        </div>
+                        <h3 class="font-semibold">Kuuntele Ammattilaisia</h3>
+                    </div>
+                    <p class="text-gray-300">Kuuntele ammattilaisten arvioita heidän toiminnastaan.</p>
+                </div>
+                
+                <div class="bg-slate-700/50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold">2</span>
+                        </div>
+                        <h3 class="font-semibold">Seuraa Markkinatrendejä</h3>
+                    </div>
+                    <p class="text-gray-300">Kiinnitä huomiota markkinatrendeihin ja liikkeisiin.</p>
+                </div>
+                
+                <div class="bg-slate-700/50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold">3</span>
+                        </div>
+                        <h3 class="font-semibold">Löydä Sisääntulopisteet</h3>
+                    </div>
+                    <p class="text-gray-300">Löydä oikea sisääntulopiste kaupoillesi.</p>
+                </div>
+                
+                <div class="bg-slate-700/50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold">4</span>
+                        </div>
+                        <h3 class="font-semibold">Pidä Positioita</h3>
+                    </div>
+                    <p class="text-gray-300">Pidä positioita, kunnes trendi päättyy, sitten työnnä se markkinoille.</p>
+                </div>
+                
+                <div class="bg-slate-700/50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold">5</span>
+                        </div>
+                        <h3 class="font-semibold">Löydä Potentiaaliset Sijoittajat</h3>
+                    </div>
+                    <p class="text-gray-300">Löydä potentiaalisimmat sijoittajat ja mahdollisuudet.</p>
+                </div>
+                
+                <div class="bg-slate-700/50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold">6</span>
+                        </div>
+                        <h3 class="font-semibold">Lue Markkinatietoja</h3>
+                    </div>
+                    <p class="text-gray-300">Opi tulkitsemaan markkinatietoja tehokkaasti.</p>
+                </div>
+                
+                <div class="bg-slate-700/50 p-6 rounded-lg md:col-span-2 lg:col-span-3">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold">7</span>
+                        </div>
+                        <h3 class="font-semibold">Muuta Ajattelutapaasi</h3>
+                    </div>
+                    <p class="text-gray-300">Muuta ajatteluasi ja kaupankäyntimenetelmiäsi sopeutuaksesi uusiin markkinoihin. Oletko muuttunut?</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                
+                <button onclick="d2()" class="btn-primary px-8 py-4 rounded-full text-white font-semibold text-lg inline-flex items-center space-x-2">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>Lisää WhatsApp Välittömästi</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Community Success Section -->
+    <div class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-6">Kuuntele Mitä Menestyneet Osakekauppiaat Sanovat</h2>
+                <p class="text-xl text-gray-300 mb-8">Yhteisömme jäsenet ovat saavuttaneet suurta menestystä asiantuntemuksellaan. Sama koskee sijoitusstrategioita!</p>
+                
+                <div class="bg-slate-700/50 p-8 rounded-lg max-w-2xl mx-auto">
+                    <blockquote class="text-lg italic text-gray-300 mb-4">
+                        "Hyvän maineen rakentaminen kestää 20 vuotta, ja vain 5 minuuttia sen tuhoamiseen. Ajattele huolellisesti, menetelmät ovat itse asiassa hyvin erilaisia. Palvelumme on maineemme. Ole varma, emme koskaan petä sinua."
+                    </blockquote>
+                </div>
+                
+                <p class="text-xl text-gray-300 mt-8">
+                    Siksi olemme sitoutuneet tulemaan parhaaksi yhteisöksi osakesijoittajille. Odotamme innolla yhteistyötä kanssasi auttaaksemme sinua saavuttamaan unelmasi. Vaihda kello ja opi rikastumaan yhdessä.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Risk Warning Section -->
+    <div class="bg-red-900/30 border-2 border-red-500/50 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold mb-6 text-red-400">⚠️ Tärkeä Riskien Julkistaminen</h2>
+                <div class="text-left max-w-4xl mx-auto space-y-4 text-sm text-gray-300">
+                    <p><strong>Sijoitusriski Varoitus:</strong> Kaikki sijoitukset sisältävät tappion riskin. Aiempi tuotto ei takaa tulevia tuloksia. Sijoitusten arvo voi laskea ja nousta, etkä välttämättä saa takaisin koko sijoittamaasi summaa.</p>
+                    
+                    <p><strong>Ei Taloudellista Neuvontaa:</strong> Annetut tiedot ovat vain koulutustarpeiden, eikä niitä pidä pitää henkilökohtaisena taloudellisena neuvona. Konsultoi aina päteviä taloudellisia neuvonantajia ennen sijoituspäätösten tekemistä.</p>
+                    
+                    <p><strong>Markkinoiden Epävakaus:</strong> Osakemarkkinat ovat alttiita epävakaudelle ja merkittäville vaihteluille. Markkinaolosuhteet voivat muuttua nopeasti, vaikuttaen sijoitusten arvoihin.</p>
+                    
+                    <p><strong>Ei Taattuja Tuottoja:</strong> Emme takaa mitään erityisiä sijoitustuottoja tai tuloksia. Kaikki sijoitusstrategiat sisältävät tappion riskin.</p>
+                    
+                    <p><strong>Koulutussisältö:</strong> Analyysimme ja keskustelumme on tarkoitettu koulutukseen auttaaksemme sijoittajia ymmärtämään paremmin markkinadynamiikkaa ja sijoitusperiaatteita.</p>
+                    
+                    <p><strong>Säännösten Noudattaminen:</strong> Sijoitustoiminnan tulee noudattaa paikallisia lakeja ja määräyksiä. Varmista, että ymmärrät sääntelyn vaatimukset omassa lainkäyttöalueessasi.</p>
+                    
+                    <p><strong>Due Diligence:</strong> Tee aina oma tutkimuksesi ja due diligence ennen sijoituspäätösten tekemistä. Harkitse taloudellista tilannettasi, sijoitustavoitteita ja riskinsietokykyäsi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h3 class="text-xl font-semibold mb-4">Ammattimainen Sijoitusanalyyttinen Yhteisö</h3>
+                <p class="text-gray-400 mb-6">Sijoittajien valtaannuttaminen koulutuksen ja ammattimaisen analyysin kautta</p>
+                
+                <div class="flex flex-wrap justify-center gap-6 mb-8">
+                    <a href="privacy.html" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">Tietosuojakäytäntö</a>
+                    <a href="terms.html" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">Käyttöehdot</a>
+                    <a href="risk.html" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">Riski Varoitus</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Ammattimainen Sijoitusanalyyttinen Yhteisö. Kaikki oikeudet pidätetään.</p>
+                <p class="mt-2 text-sm">Tämä verkkosivusto tarjoaa koulutussisältöä sijoitusanalyysistä ja markkinatrendeistä. Kaikki sisältö on vain tiedotusvalaan.</p>
+                <p class="mt-2 text-xs">Lisensoitu Sijoitusneuvontapalvelu | Säännelty Talousanalyysi Alusta</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float breathing">
+        <div class="badge breathing">1</div>
+        <i class="fab fa-whatsapp text-white text-2xl cursor-pointer" onclick="d2()"></i>
+    </div>
+
+    <!-- Floating Bottom Button -->
+    <div class="floating-btn">
+        <button onclick="d2()" class="btn-primary w-full py-4 rounded-full text-white font-semibold text-lg breathing inline-flex items-center justify-center space-x-2">
+            <i class="fab fa-whatsapp text-xl"></i>
+            <span>Liity Ammattimaiseen Yhteisöömme</span>
+        </button>
+    </div>
+
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // WhatsApp redirect function
+       
+
+        // Smooth scrolling for better user experience
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
