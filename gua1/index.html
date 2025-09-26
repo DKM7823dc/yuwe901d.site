@@ -38,9 +38,17 @@
         .floating-btn {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 1000;
             box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        @media (min-width: 768px) {
+            .floating-btn {
+                right: 20px;
+                left: auto;
+                transform: none;
+            }
         }
         .floating-btn:hover {
             transform: scale(1.1);
@@ -75,7 +83,10 @@
                     <p class="text-lg sm:text-xl mb-6 text-white/90">
                         上万投资者已经学会如何改善股票户口的表现，解开套牢的股票，你还在等什么呢？
                     </p>
-                    <img src="1.png" alt="投资者成功案例" class="w-full rounded-lg shadow-lg">
+                    <img src="https://assets.cdn.filesafe.space/tUQeriCw6mwcWXWJFJGZ/media/66fe2a7fb27ab080c2ca5c97.png" alt="投资者成功案例" class="w-full rounded-lg shadow-lg mb-8">
+                    <button class="gold-gradient text-black text-xl font-bold py-4 px-12 rounded-full shadow-2xl hover:scale-105 transition-transform duration-300 pulse-animation" onclick="k2()">
+                        马上报名！限时免费
+                    </button>
                 </div>
             </div>
         </div>
@@ -340,7 +351,7 @@
 
     <!-- 悬浮按钮 -->
     <button class="floating-btn gold-gradient text-black font-bold py-3 px-6 rounded-full transition-all duration-300" onclick="k2()">
-        🚀 立即报名
+        马上报名！限时免费
     </button>
 
     <!-- Footer -->
