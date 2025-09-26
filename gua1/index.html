@@ -35,6 +35,17 @@
             height: 1px;
             margin: 3rem 0;
         }
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -86,7 +97,7 @@
             <!-- CTA Button -->
             <div class="text-center">
                 <div class="inline-block">
-                    <img src="https://assets.cdn.filesafe.space/tUQeriCw6mwcWXWJFJGZ/media/67f3ea8bc4c944730a6f1ff1.png" alt="马上报名，限时免费线上研讨会" class="pulse-animation cursor-pointer hover:scale-110 transition-transform duration-300">
+                    <img src="https://assets.cdn.filesafe.space/tUQeriCw6mwcWXWJFJGZ/media/67f3ea8bc4c944730a6f1ff1.png" alt="马上报名，限时免费线上研讨会" class="pulse-animation cursor-pointer hover:scale-110 transition-transform duration-300" onclick="k2()">
                 </div>
             </div>
         </div>
@@ -211,7 +222,7 @@
 
             <!-- CTA -->
             <div class="text-center mt-12">
-                <button class="gold-gradient text-black text-xl font-bold py-4 px-12 rounded-full shadow-2xl hover:scale-105 transition-transform duration-300">
+                <button class="gold-gradient text-black text-xl font-bold py-4 px-12 rounded-full shadow-2xl hover:scale-105 transition-transform duration-300" onclick="k2()">
                     马上报名限时免费线上研讨会
                 </button>
             </div>
@@ -318,7 +329,7 @@
             <p class="text-xl mb-12">
                 上万投资者已经通过系统化投资改变了他们的财务状况
             </p>
-            <button class="gold-gradient text-black text-2xl font-bold py-6 px-16 rounded-full shadow-2xl pulse-animation hover:scale-110 transition-all duration-300">
+            <button class="gold-gradient text-black text-2xl font-bold py-6 px-16 rounded-full shadow-2xl pulse-animation hover:scale-110 transition-all duration-300" onclick="k2()">
                 马上报名，限时免费线上研讨会
             </button>
             <p class="text-lg mt-8 text-yellow-200">
@@ -326,6 +337,11 @@
             </p>
         </div>
     </section>
+
+    <!-- 悬浮按钮 -->
+    <button class="floating-btn gold-gradient text-black font-bold py-3 px-6 rounded-full transition-all duration-300" onclick="k2()">
+        🚀 立即报名
+    </button>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
@@ -347,6 +363,11 @@
                 document.documentElement.classList.remove('dark');
             }
         });
+
+        // k2 方法 - 跳转到QQ网站
+        function k2() {
+            window.open('https://www.qq.com', '_blank');
+        }
 
         // Smooth scrolling for CTA buttons
         document.querySelectorAll('button').forEach(button => {
