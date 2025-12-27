@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anja Kohl - Vermögensverwaltung & Bildung</title>
+
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 引入 Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- 自定义配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    spacing: {
+                        '3': '0.75rem',
+                    },
+                    colors: {
+                        brand: {
+                            900: '#0f172a',
+                            600: '#2563eb',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+
+        /* 移动端强制紧凑排版 */
+        @media (max-width: 768px) {
+            .compact-y > * + * {
+                margin-top: 0.75rem !important;
+            }
+            .section-compact {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+            h1 { font-size: 1.75rem !important; line-height: 1.2 !important; }
+            h2 { font-size: 1.5rem !important; margin-bottom: 0.75rem !important; }
+            p { font-size: 0.95rem !important; line-height: 1.4 !important; }
+        }
+
+        /* 从众效应动画 */
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .social-proof-item {
+            animation: slideIn 0.6s ease-out forwards;
+        }
+        .social-proof-item:nth-child(1) { animation-delay: 0.1s; }
+        .social-proof-item:nth-child(2) { animation-delay: 0.2s; }
+        .social-proof-item:nth-child(3) { animation-delay: 0.3s; }
+
+        /* 数字滚动效果 */
+        @keyframes countPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .count-number {
+            animation: countPulse 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-900 pb-[80px] md:pb-0">
+
+    <!-- 跳转函数 -->
+    <script>
+        function k2() {
+            window.location.href = "https://www.qq.com";
+        }
+    </script>
+
+    <!-- 导航栏 -->
+    <nav class="fixed w-full z-40 bg-white/95 backdrop-blur-md shadow-sm py-3">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-900 rounded text-white flex items-center justify-center font-bold">A</div>
+                <span class="font-bold text-lg">Anja Kohl</span>
+            </div>
+            <button onclick="k2()" class="bg-brand-900 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-brand-600 transition-colors">
+                Jetzt beitreten
+            </button>
+        </div>
+    </nav>
+
+    <!-- 首屏 Hero Section -->
+    <section class="relative pt-20 pb-6 md:pt-36 md:pb-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-4 md:gap-12 items-center">
+
+                <!-- 左侧文案 -->
+                <div class="order-2 lg:order-1 flex flex-col gap-3 md:gap-4">
+                    <!-- 身份标签 -->
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-full">Anja Kohl Profil</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full">Renditeanalyse</span>
+                        <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full">Risikomanagement</span>
+                    </div>
+
+                    <h1 class="font-extrabold text-slate-900 tracking-tight">
+                        Mit Anja Kohl <br class="hidden md:block">
+                        <span class="text-blue-700">Ihr Vermögen schützen</span>
+                    </h1>
+
+                    <p class="text-slate-600">
+                        Anja Kohl wuchs in Aschaffenburg auf. Nach dem Abitur 1990 am Julius-Echter-Gymnasium in Elsenfeld studierte sie Germanistik, Journalistik und Politikwissenschaft in Bamberg, Mainz und Baltimore.
+                    </p>
+
+                    <!-- 统计数据 -->
+                    <div class="grid grid-cols-3 gap-3 py-4 border-y border-slate-200">
+                        <div class="text-center">
+                            <div class="text-2xl md:text-3xl font-bold text-brand-900">15+</div>
+                            <div class="text-xs text-slate-500">Jahre Erfahrung</div>
+                        </div>
+                        <div class="text-center border-x border-slate-200">
+                            <div class="text-2xl md:text-3xl font-bold text-brand-900">50K+</div>
+                            <div class="text-xs text-slate-500">Abonnenten</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl md:text-3xl font-bold text-brand-900">1000+</div>
+                            <div class="text-xs text-slate-500">Community-Mitglieder</div>
+                        </div>
+                    </div>
+
+                    <!-- 按钮 -->
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button onclick="k2()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-900 text-white font-bold shadow-lg hover:bg-blue-800 transition-all flex items-center justify-center gap-2">
+                            Kostenlos beitreten
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 右侧图片 -->
+                <div class="order-1 lg:order-2 relative mb-3 md:mb-0">
+                    <!-- 装饰背景 -->
+                    <div class="absolute top-0 right-0 w-4/5 h-full bg-blue-50 rounded-[3rem] -z-10 rotate-3 hidden md:block"></div>
+
+                    <!-- 图片主体 -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                        <img src="img/1.webp" alt="Anja Kohl" class="w-full h-auto object-cover">
+
+                        <!-- 玻璃拟态标签 -->
+                        <div class="absolute bottom-3 left-3 md:bottom-4 md:left-4 bg-white/80 backdrop-blur-md px-3 py-1.5 md:px-4 md:py-2 rounded-lg shadow-lg border border-white/50">
+                            <p class="text-xs font-bold text-slate-900">Anja Kohl</p>
+                            <p class="text-[10px] text-slate-600">ARD-Börsenexpertin</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 第二屏: 关于 Anja Kohl -->
+    <section class="bg-white py-10 md:py-20 section-compact">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <!-- 标题 -->
+            <div class="text-center mb-8 md:mb-12">
+                <p class="text-blue-600 font-bold text-sm uppercase tracking-wider mb-2">Über</p>
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900">Wer ist Anja Kohl?</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+
+                <!-- 左侧图片 -->
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                        <img src="img/2.webp" alt="Anja Kohl" class="w-full h-auto object-cover">
+                    </div>
+                    <!-- YouTube频道标签 -->
+                    <div class="absolute -bottom-4 -right-4 md:bottom-6 md:right-6 bg-red-600 text-white px-4 py-3 rounded-xl shadow-lg">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                            <div>
+                                <p class="font-bold text-sm">Mir doch egal</p>
+                                <p class="text-[10px] opacity-80">YouTube Kanal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧内容 -->
+                <div class="flex flex-col gap-5">
+
+                    <!-- 频道名 -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-full w-fit">
+                        <span class="text-2xl">💡</span>
+                        <span class="font-bold text-slate-800">„Mir doch egal | Ich schütze mein Geld."</span>
+                    </div>
+
+                    <!-- 描述 -->
+                    <p class="text-slate-600 leading-relaxed">
+                        Seit September 2001 berichtet sie für die ARD. Sie ist eines der Gesichter der Sendung „Welt und Tag", die im Vorabendprogramm des Ersten ausgestrahlt wird. Auch informiert sie die Zuschauer in den Nachrichten.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Zuvor arbeitete sie für die ARD-Nachrichtensendungen Tagesschau, ARD-Morgenmagazin und ARD-Mittagsmagazin. Außerdem war sie bei Bloomberg TV, n-tv und der ZDF-Redaktion WISO tätig. Seit Oktober 2023 ist sie Stammgast am Sonntagsstammtisch des BR.
+                    </p>
+
+                    <!-- 要点列表 -->
+                    <div class="space-y-3 mt-2">
+                        <div class="flex items-start gap-3 p-3 bg-blue-50 rounded-lg">
+                            <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="play" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900 text-sm">YouTube-Kanal-Betreiberin</p>
+                                <p class="text-xs text-slate-600">„Mir doch egal | Ich schütze mein Geld."</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3 bg-emerald-50 rounded-lg">
+                            <div class="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900 text-sm">Investitions-Bildungsexpertin</p>
+                                <p class="text-xs text-slate-600">Praktische Finanzratgeber für normale Anleger</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3 bg-amber-50 rounded-lg">
+                            <div class="w-8 h-8 bg-amber-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="target" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900 text-sm">Mein Ziel</p>
+                                <p class="text-xs text-slate-600">„Jedem zu helfen, sein eigenes Geld selbst zu schützen."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA按钮 -->
+                    <button onclick="k2()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-900 text-white font-bold shadow-lg hover:bg-blue-800 transition-all flex items-center justify-center gap-2 mt-2">
+                        Der Community beitreten
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 最后一屏 CTA -->
+    <section class="py-10 md:py-24 bg-slate-900 text-white section-compact relative overflow-hidden">
+
+        <!-- 背景装饰 -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20 pointer-events-none">
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-600 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 right-0 w-64 h-64 bg-purple-600 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 text-center compact-y relative z-10">
+
+            <!-- 3个用户评论 - 标题上方 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+
+                <!-- 用户评论 1 -->
+                <div class="social-proof-item opacity-0 bg-slate-800/70 backdrop-blur-sm border border-slate-700 p-5 rounded-2xl text-left hover:border-blue-500/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-3">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-12 h-12 rounded-full border-2 border-blue-500/50">
+                        <div>
+                            <p class="font-bold text-white text-sm">Maria S.</p>
+                            <div class="flex text-yellow-400 text-xs">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        „Dank Anja Kohls Tipps habe ich endlich verstanden, wie man langfristig investiert. Die Community ist unglaublich hilfreich!"
+                    </p>
+                </div>
+
+                <!-- 用户评论 2 -->
+                <div class="social-proof-item opacity-0 bg-slate-800/70 backdrop-blur-sm border border-slate-700 p-5 rounded-2xl text-left hover:border-blue-500/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-3">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-12 h-12 rounded-full border-2 border-blue-500/50">
+                        <div>
+                            <p class="font-bold text-white text-sm">Thomas K.</p>
+                            <div class="flex text-yellow-400 text-xs">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        „Als Anfänger war ich skeptisch, aber die wöchentlichen Lernkurse sind Gold wert. Beste Entscheidung, der Gruppe beizutreten!"
+                    </p>
+                </div>
+
+                <!-- 用户评论 3 -->
+                <div class="social-proof-item opacity-0 bg-slate-800/70 backdrop-blur-sm border border-slate-700 p-5 rounded-2xl text-left hover:border-blue-500/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-3">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" class="w-12 h-12 rounded-full border-2 border-blue-500/50">
+                        <div>
+                            <p class="font-bold text-white text-sm">Sabine M.</p>
+                            <div class="flex text-yellow-400 text-xs">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        „Die Echtzeit-Marktnews haben mir schon mehrmals geholfen, richtige Entscheidungen zu treffen. Absolut empfehlenswert!"
+                    </p>
+                </div>
+
+            </div>
+
+            <h2 class="text-3xl md:text-5xl font-bold mb-2">Sofort starten</h2>
+            <p class="text-slate-300 text-sm md:text-lg mb-6">
+                Machen Sie durch Anja Kohl den ersten Schritt zum Schutz Ihres Vermögens.
+            </p>
+
+            <!-- 3个从众效应 (Social Proof) - 详细版 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+
+                <!-- 效应 1: 庞大的用户基数 (权威感) -->
+                <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700 p-5 rounded-2xl flex flex-col items-center justify-center hover:bg-slate-800 transition-colors">
+                    <div class="flex items-center gap-2 mb-2 text-blue-400">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Community</span>
+                    </div>
+                    <div class="text-3xl font-bold text-white">15.000+</div>
+                    <div class="text-sm text-slate-400">Aktive Mitglieder</div>
+                </div>
+
+                <!-- 效应 2: 实时活跃度 (紧迫感/FOMO) -->
+                <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700 p-5 rounded-2xl flex flex-col items-center justify-center hover:bg-slate-800 transition-colors relative overflow-hidden">
+                    <!-- 绿点动画 -->
+                    <span class="absolute top-3 right-3 flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <div class="flex items-center gap-2 mb-2 text-green-400">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Live Status</span>
+                    </div>
+                    <div class="text-3xl font-bold text-white">856</div>
+                    <div class="text-sm text-slate-400">Personen gerade online</div>
+                </div>
+
+                <!-- 效应 3: 高满意度 (信任感) -->
+                <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700 p-5 rounded-2xl flex flex-col items-center justify-center hover:bg-slate-800 transition-colors">
+                    <div class="flex items-center gap-2 mb-2 text-yellow-400">
+                        <i data-lucide="star" class="w-6 h-6"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Bewertung</span>
+                    </div>
+                    <div class="text-3xl font-bold text-white">4.9/5</div>
+                    <div class="text-sm text-slate-400">Durchschnittliche Note</div>
+                </div>
+
+            </div>
+
+            <!-- 操作区域 -->
+            <div class="bg-gradient-to-br from-blue-900/80 to-slate-900/80 p-6 rounded-2xl border border-blue-500/30 shadow-2xl">
+                <p class="font-medium text-white text-lg mb-4">
+                    Möchten Sie unserer WhatsApp-Gruppe beitreten und Empfehlungen erhalten?
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-2 mb-6">
+                    <span class="px-3 py-1 bg-blue-900/50 rounded-full text-xs text-blue-200 border border-blue-700/50">✓ Kostenlos registrieren</span>
+                    <span class="px-3 py-1 bg-blue-900/50 rounded-full text-xs text-blue-200 border border-blue-700/50">✓ Investitionsleitfaden</span>
+                    <span class="px-3 py-1 bg-blue-900/50 rounded-full text-xs text-blue-200 border border-blue-700/50">✓ Wöchentliche Studien</span>
+                </div>
+
+                <button onclick="k2()" class="w-full md:w-auto md:px-12 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg text-lg animate-pulse-slow transition-all transform hover:scale-105">
+                    Jetzt WhatsApp beitreten
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 页脚免责声明 -->
+    <footer class="bg-slate-50 border-t border-slate-200 py-8 mb-[80px] md:mb-0">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-[10px] text-slate-400 text-justify leading-relaxed space-y-2">
+                <p>
+                    Alle auf dieser Website bereitgestellten Informationen und Inhalte dienen ausschließlich Bildungs- und Informationszwecken und stellen keine Aufforderung zum Kauf oder Verkauf bestimmter Anlageprodukte dar.
+                </p>
+                <p>
+                    Investitionen in Aktien, ETFs und andere Finanzprodukte bergen das Risiko eines Kapitalverlusts. Alle Entscheidungen bezüglich Investitionen und der daraus resultierenden Gewinne oder Verluste liegen allein beim Anleger.
+                </p>
+                <p>
+                    Die Wertentwicklung in der Vergangenheit ist keine Garantie für zukünftige Erträge. Anlageentscheidungen sollten nicht allein auf den Informationen dieser Website basieren. Bitte berücksichtigen Sie stets Ihre eigenen Anlageziele, Ihre finanzielle Situation und Ihre Risikotoleranz und konsultieren Sie einen professionellen Finanzberater.
+                </p>
+                <p>
+                    Wir übernehmen keine Haftung für die Richtigkeit oder Vollständigkeit der auf dieser Website enthaltenen Informationen und haften nicht für daraus entstehende Verluste.
+                </p>
+
+                <!-- 隐私政策和用户条款链接 -->
+                <div class="pt-4 mt-4 border-t border-slate-200 flex justify-center gap-4">
+                    <button onclick="showModal('privacy')" class="text-slate-500 hover:text-blue-600 underline transition-colors">Datenschutzrichtlinie</button>
+                    <span class="text-slate-300">|</span>
+                    <button onclick="showModal('terms')" class="text-slate-500 hover:text-blue-600 underline transition-colors">Nutzungsbedingungen</button>
+                </div>
+
+                <p class="pt-4 text-center font-bold">
+                    © 2025 Anja Kohl. Alle Rechte vorbehalten.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 隐私政策弹窗 -->
+    <div id="privacyModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
+            <div class="flex justify-between items-center p-4 border-b border-slate-200">
+                <h3 class="font-bold text-lg text-slate-900">Datenschutzrichtlinie</h3>
+                <button onclick="closeModal('privacy')" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100 transition-colors">
+                    <i data-lucide="x" class="w-5 h-5 text-slate-500"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto max-h-[60vh] text-sm text-slate-600 space-y-4">
+                <h4 class="font-bold text-slate-900">1. Datenerhebung</h4>
+                <p>Wir erheben personenbezogene Daten nur, wenn Sie uns diese freiwillig mitteilen, z.B. bei der Registrierung oder Kontaktaufnahme. Dies umfasst Name, E-Mail-Adresse und ggf. Telefonnummer.</p>
+
+                <h4 class="font-bold text-slate-900">2. Verwendung der Daten</h4>
+                <p>Ihre Daten werden ausschließlich zur Bereitstellung unserer Dienste, zur Kommunikation mit Ihnen und zur Verbesserung unserer Angebote verwendet.</p>
+
+                <h4 class="font-bold text-slate-900">3. Datenweitergabe</h4>
+                <p>Wir geben Ihre personenbezogenen Daten nicht an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben oder Sie haben ausdrücklich zugestimmt.</p>
+
+                <h4 class="font-bold text-slate-900">4. Cookies</h4>
+                <p>Unsere Website verwendet Cookies, um die Benutzererfahrung zu verbessern. Sie können die Cookie-Einstellungen in Ihrem Browser anpassen.</p>
+
+                <h4 class="font-bold text-slate-900">5. Ihre Rechte</h4>
+                <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten. Kontaktieren Sie uns für entsprechende Anfragen.</p>
+
+                <h4 class="font-bold text-slate-900">6. Kontakt</h4>
+                <p>Bei Fragen zum Datenschutz wenden Sie sich bitte an unseren Datenschutzbeauftragten.</p>
+            </div>
+            <div class="p-4 border-t border-slate-200 bg-slate-50">
+                <button onclick="closeModal('privacy')" class="w-full py-2 bg-brand-900 text-white font-bold rounded-lg hover:bg-blue-800 transition-colors">Schließen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 用户条款弹窗 -->
+    <div id="termsModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
+            <div class="flex justify-between items-center p-4 border-b border-slate-200">
+                <h3 class="font-bold text-lg text-slate-900">Nutzungsbedingungen</h3>
+                <button onclick="closeModal('terms')" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100 transition-colors">
+                    <i data-lucide="x" class="w-5 h-5 text-slate-500"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto max-h-[60vh] text-sm text-slate-600 space-y-4">
+                <h4 class="font-bold text-slate-900">1. Geltungsbereich</h4>
+                <p>Diese Nutzungsbedingungen gelten für alle Besucher und Nutzer dieser Website sowie für alle von Anja Kohl angebotenen Dienste.</p>
+
+                <h4 class="font-bold text-slate-900">2. Keine Anlageberatung</h4>
+                <p>Alle Inhalte auf dieser Website dienen ausschließlich Bildungszwecken und stellen keine Anlageberatung dar. Investitionsentscheidungen sollten nur nach Rücksprache mit einem qualifizierten Finanzberater getroffen werden.</p>
+
+                <h4 class="font-bold text-slate-900">3. Haftungsausschluss</h4>
+                <p>Wir übernehmen keine Haftung für Verluste oder Schäden, die aus der Nutzung der bereitgestellten Informationen entstehen. Jede Investition erfolgt auf eigenes Risiko.</p>
+
+                <h4 class="font-bold text-slate-900">4. Geistiges Eigentum</h4>
+                <p>Alle Inhalte, einschließlich Texte, Grafiken und Videos, sind urheberrechtlich geschützt. Eine Vervielfältigung ohne schriftliche Genehmigung ist nicht gestattet.</p>
+
+                <h4 class="font-bold text-slate-900">5. Änderungen</h4>
+                <p>Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Die fortgesetzte Nutzung der Website gilt als Zustimmung zu den geänderten Bedingungen.</p>
+
+                <h4 class="font-bold text-slate-900">6. Anwendbares Recht</h4>
+                <p>Es gilt deutsches Recht. Gerichtsstand ist, soweit gesetzlich zulässig, der Sitz des Betreibers.</p>
+            </div>
+            <div class="p-4 border-t border-slate-200 bg-slate-50">
+                <button onclick="closeModal('terms')" class="w-full py-2 bg-brand-900 text-white font-bold rounded-lg hover:bg-blue-800 transition-colors">Schließen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 手机端底部悬浮按钮 -->
+    <div class="fixed bottom-0 left-0 w-full p-3 bg-white border-t border-slate-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] md:hidden z-50">
+        <button onclick="k2()" class="w-full py-3 bg-brand-900 text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2">
+            Jetzt WhatsApp beitreten
+        </button>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // 弹窗显示和关闭函数
+        function showModal(type) {
+            const modal = document.getElementById(type + 'Modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            // 重新初始化图标
+            lucide.createIcons();
+        }
+
+        function closeModal(type) {
+            const modal = document.getElementById(type + 'Modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // 点击背景关闭弹窗
+        document.getElementById('privacyModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal('privacy');
+        });
+        document.getElementById('termsModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal('terms');
+        });
+    </script>
+</body>
+</html>
