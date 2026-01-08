@@ -8,6 +8,35 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+	<!-- facebook 像素-->
+       <script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '630384713310994');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=630384713310994&ev=PageView&noscript=1"
+/></noscript>
+
+
+
+	<script>
+	  function handleWhatsAppClick() {
+	   //默认fb事件 购物和加购
+	    fbq('track', 'AddToCart');
+      fbq('track', 'Purchase');
+            k2();
+            //这个地方放接粉链接啊
+            window.location.href = "https://www.qq.com";
+        }
+	</script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -120,7 +149,7 @@
                         <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-16 h-16 rounded-full object-cover border-2 border-blue-100">
                         <div>
                             <div class="font-bold text-gray-900">Michael Thompson</div>
-                            <div class="text-sm text-gray-500">Retired Engineer, 68</div>
+                            <div class="text-sm text-gray-500">Retired Engineer, 38</div>
                         </div>
                     </div>
                     <div class="flex mb-4 text-yellow-400">
@@ -140,7 +169,7 @@
                         <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="w-16 h-16 rounded-full object-cover border-2 border-blue-100">
                         <div>
                             <div class="font-bold text-gray-900">Sarah Jenkins</div>
-                            <div class="text-sm text-gray-500">Former Teacher, 62</div>
+                            <div class="text-sm text-gray-500">Former Teacher, 41</div>
                         </div>
                     </div>
                     <div class="flex mb-4 text-yellow-400">
@@ -160,7 +189,7 @@
                         <img src="https://randomuser.me/api/portraits/men/64.jpg" alt="User" class="w-16 h-16 rounded-full object-cover border-2 border-blue-100">
                         <div>
                             <div class="font-bold text-gray-900">David Chen</div>
-                            <div class="text-sm text-gray-500">Business Owner, 71</div>
+                            <div class="text-sm text-gray-500">Business Owner, 32</div>
                         </div>
                     </div>
                     <div class="flex mb-4 text-yellow-400">
@@ -631,11 +660,7 @@
         }
 
         // --- WhatsApp Logic ---
-        function handleWhatsAppClick() {
-            k2();
-            // Redirect to www.qq.com as requested
-            window.location.href = "https://www.qq.com";
-        }
+      
 
         // --- Quiz Logic ---
         function nextStep(step) {
