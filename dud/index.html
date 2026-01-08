@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Insights - Retirement Protection</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* Animation Utilities */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Accordion Styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-btn[aria-expanded="true"] .icon-chevron {
+            transform: rotate(180deg);
+        }
+        
+        /* Mobile Popup Optimization */
+        @media (max-width: 640px) {
+            .mobile-full-width {
+                width: 95% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+    <!-- Top Banner -->
+    <div class="bg-blue-900 text-white text-center py-3 px-4 text-sm font-semibold tracking-wide">
+        Limited Spots Available This Week - Only 5 Consultations Remaining
+    </div>
+
+    <!-- Hero Section -->
+    <div class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="img/b.png" alt="Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/40"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 pt-12 pb-20">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 fade-in-up">
+                    Protect Your <span class="text-blue-400">Retirement Savings</span> with Smarter Market Insights
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed fade-in-up" style="transition-delay: 0.1s;">
+                    Join 1,000+ investors aged 55+ who learned to navigate today's rapidly evolving markets—from AI breakthroughs to clean energy shifts. No complex charts. No confusing terminology. Just practical insights grounded in real market trends.
+                </p>
+                
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-3 gap-4 md:gap-8 mb-10 border-t border-white/20 pt-8 fade-in-up" style="transition-delay: 0.2s;">
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-white">15+</div>
+                        <div class="text-xs md:text-sm text-gray-300 mt-1">Years Helping Retirees</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-white">87%</div>
+                        <div class="text-xs md:text-sm text-gray-300 mt-1">Report Improved Confidence</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-white">64</div>
+                        <div class="text-xs md:text-sm text-gray-300 mt-1">Average Age of Learners</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 fade-in-up" style="transition-delay: 0.3s;">
+                    <!-- Button Removed as requested -->
+                    <div class="flex items-center gap-2 text-xs text-gray-400 px-2">
+                        <i data-lucide="info" class="w-4 h-4"></i>
+                        <span>*Educational content only. Not financial advice.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials (Social Proof) -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Learners Say</h2>
+                <p class="text-lg text-gray-600">Real success stories from investors who transformed their understanding of market analysis</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 fade-in-up">
+                    <div class="flex items-center gap-4 mb-6">
+                        <!-- Real Photo -->
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-16 h-16 rounded-full object-cover border-2 border-blue-100">
+                        <div>
+                            <div class="font-bold text-gray-900">Michael Thompson</div>
+                            <div class="text-sm text-gray-500">Retired Engineer, 68</div>
+                        </div>
+                    </div>
+                    <div class="flex mb-4 text-yellow-400">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed">"I was always intimidated by the speed of the market. This program slowed it down and explained the 'why'. I feel much more secure about my portfolio now."</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="flex items-center gap-4 mb-6">
+                        <!-- Real Photo -->
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="w-16 h-16 rounded-full object-cover border-2 border-blue-100">
+                        <div>
+                            <div class="font-bold text-gray-900">Sarah Jenkins</div>
+                            <div class="text-sm text-gray-500">Former Teacher, 62</div>
+                        </div>
+                    </div>
+                    <div class="flex mb-4 text-yellow-400">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed">"The focus on seniors is real. They don't use jargon, they use plain English. It's refreshing to find a service that actually listens to our needs."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="flex items-center gap-4 mb-6">
+                        <!-- Real Photo -->
+                        <img src="https://randomuser.me/api/portraits/men/64.jpg" alt="User" class="w-16 h-16 rounded-full object-cover border-2 border-blue-100">
+                        <div>
+                            <div class="font-bold text-gray-900">David Chen</div>
+                            <div class="text-sm text-gray-500">Business Owner, 71</div>
+                        </div>
+                    </div>
+                    <div class="flex mb-4 text-yellow-400">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed">"Finally, someone explaining the AI revolution in a way that makes sense for long-term holding, not just day trading. Highly recommended."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Investors Trust Us -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Investors Trust Us</h2>
+                    <p class="text-lg text-gray-600 mb-10">Building trust through transparency, experience, and commitment to education</p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-8">
+                        <!-- Item 1 -->
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="calendar-check" class="w-6 h-6 text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">15+ Years of Experience</h4>
+                                <p class="text-sm text-gray-600 mt-2">Since 2009, helping everyday investors understand market analysis concepts.</p>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="shield-off" class="w-6 h-6 text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">No High-Pressure Sales</h4>
+                                <p class="text-sm text-gray-600 mt-2">Free consultation with zero obligation. We focus on education, not sales tactics.</p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="lock" class="w-6 h-6 text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Privacy Protected</h4>
+                                <p class="text-sm text-gray-600 mt-2">Bank-level SSL encryption. We never share your data with third parties.</p>
+                            </div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="user-check" class="w-6 h-6 text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Real Human Support</h4>
+                                <p class="text-sm text-gray-600 mt-2">Talk to a real person, not a chatbot. We're here to answer your questions personally.</p>
+                            </div>
+                        </div>
+                        <!-- Item 5 -->
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="glasses" class="w-6 h-6 text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Designed for Seniors</h4>
+                                <p class="text-sm text-gray-600 mt-2">Materials created specifically for investors 55+. Clear language, patient explanations.</p>
+                            </div>
+                        </div>
+                        <!-- Item 6 -->
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="users" class="w-6 h-6 text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">1,000+ Success Stories</h4>
+                                <p class="text-sm text-gray-600 mt-2">Join a community of satisfied learners who improved their market understanding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl fade-in-up">
+                    <img src="img/3.jpg" alt="Trust" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-blue-900/20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What We Offer</h2>
+                <p class="text-lg text-slate-300">Educational resources designed for investors like you</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 fade-in-up">
+                    <i data-lucide="bar-chart-2" class="w-10 h-10 text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Easy-to-Understand Market Data</h3>
+                    <p class="text-sm text-slate-400">Access educational resources about publicly available market data, explained in plain English</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 fade-in-up" style="transition-delay: 0.1s;">
+                    <i data-lucide="book-open" class="w-10 h-10 text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Step-by-Step Analysis Education</h3>
+                    <p class="text-sm text-slate-400">Learn market analysis concepts at your own pace, with clear explanations and examples</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 fade-in-up" style="transition-delay: 0.2s;">
+                    <i data-lucide="award" class="w-10 h-10 text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">15+ Years of Expertise</h3>
+                    <p class="text-sm text-slate-400">Benefit from over 15 years of experience in market analysis education</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 fade-in-up" style="transition-delay: 0.3s;">
+                    <i data-lucide="library" class="w-10 h-10 text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Comprehensive Learning Library</h3>
+                    <p class="text-sm text-slate-400">Access a full library of educational materials about market analysis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Understanding Today's Market Landscape -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Understanding Today's Market Landscape</h2>
+                <p class="text-lg text-gray-600">Learn how major trends are reshaping investment opportunities</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- AI -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-600 fade-in-up">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900">The AI & Technology Revolution</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-1"></i>
+                            <span>Over the past two years, the tech sector has experienced structural growth</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-1"></i>
+                            <span>From semiconductor manufacturing to cloud computing, understand which areas are driving expansion</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-1"></i>
+                            <span>Learn how to identify technologies with long-term potential</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Clean Energy -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-green-600 fade-in-up" style="transition-delay: 0.1s;">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900">Clean Energy & Infrastructure</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-600 flex-shrink-0 mt-1"></i>
+                            <span>Energy transition is creating new investment opportunities</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-600 flex-shrink-0 mt-1"></i>
+                            <span>Electric vehicles, solar power, and battery technology: understanding long-term development logic</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-600 flex-shrink-0 mt-1"></i>
+                            <span>Learn how policy and market trends interact</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Innovation Leaders -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-purple-600 fade-in-up" style="transition-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900">Innovation Leaders to Watch</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-purple-600 flex-shrink-0 mt-1"></i>
+                            <span>Understand how companies like Tesla reshape multiple industries</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-purple-600 flex-shrink-0 mt-1"></i>
+                            <span>From electric vehicles to space exploration: learning from diverse business models</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-purple-600 flex-shrink-0 mt-1"></i>
+                            <span>Identify characteristics of companies with disruptive potential</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-World Innovation -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Real-World Innovation in Action</h2>
+                <p class="text-lg text-gray-600">See how companies like SpaceX are revolutionizing industries through technological breakthroughs</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="group rounded-2xl overflow-hidden shadow-lg relative fade-in-up">
+                    <img src="img/1.jpg" alt="SpaceX" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                        <p class="text-white font-bold text-lg">Falcon 9 - Reliable launch vehicle</p>
+                    </div>
+                </div>
+                <div class="group rounded-2xl overflow-hidden shadow-lg relative fade-in-up">
+                    <img src="img/2.jpg" alt="SpaceX" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                        <p class="text-white font-bold text-lg">Innovation in space exploration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Approach (Modified: No Image, No Button) -->
+    <section class="py-20 bg-blue-50">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <div class="fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Understanding Market Trends: A Practical Approach</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    See how we analyze real market movements—from tech sector shifts to emerging opportunities—in plain, easy-to-follow language.
+                </p>
+                <!-- Button Removed as requested -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Full Content) -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600">Common questions from investors like you</p>
+            </div>
+
+            <div class="space-y-4 fade-in-up">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition-colors" aria-expanded="false">
+                        <span class="font-semibold text-gray-900">Is the consultation really free?</span>
+                        <i data-lucide="chevron-down" class="icon-chevron w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="px-6 py-4 text-gray-600">
+                            Yes, absolutely. Our initial consultation is 100% free with no obligation to purchase anything. We believe in earning your trust first.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition-colors" aria-expanded="false">
+                        <span class="font-semibold text-gray-900">I'm not tech-savvy. Can I still use your materials?</span>
+                        <i data-lucide="chevron-down" class="icon-chevron w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="px-6 py-4 text-gray-600">
+                            Absolutely! Our materials are designed specifically for investors who prefer straightforward explanations over complex charts. Many of our learners are in their 60s and 70s and tell us our approach is refreshingly simple.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition-colors" aria-expanded="false">
+                        <span class="font-semibold text-gray-900">Will someone try to sell me something during the consultation?</span>
+                        <i data-lucide="chevron-down" class="icon-chevron w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="px-6 py-4 text-gray-600">
+                            No. Our consultation is purely educational. We'll answer your questions, share some insights, and that's it. No sales pitch, no pressure. You're in control.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition-colors" aria-expanded="false">
+                        <span class="font-semibold text-gray-900">Do I need prior investment experience?</span>
+                        <i data-lucide="chevron-down" class="icon-chevron w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="px-6 py-4 text-gray-600">
+                            No. Our educational materials are designed for all levels, from complete beginners to experienced investors looking to refresh their knowledge.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition-colors" aria-expanded="false">
+                        <span class="font-semibold text-gray-900">How is this different from what I see on CNBC or Bloomberg?</span>
+                        <i data-lucide="chevron-down" class="icon-chevron w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="px-6 py-4 text-gray-600">
+                            We focus on practical, actionable education rather than daily market noise. Our goal is to help you understand the "why" behind market movements, not just react to headlines.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition-colors" aria-expanded="false">
+                        <span class="font-semibold text-gray-900">Is my personal information secure?</span>
+                        <i data-lucide="chevron-down" class="icon-chevron w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="px-6 py-4 text-gray-600">
+                            Yes. We use bank-level SSL encryption and never share your data with third parties. Your privacy is our top priority.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition-colors" aria-expanded="false">
+                        <span class="font-semibold text-gray-900">What if I've lost money in the past? Can this help me?</span>
+                        <i data-lucide="chevron-down" class="icon-chevron w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="px-6 py-4 text-gray-600">
+                            Many of our learners came to us after experiencing losses. Understanding market analysis won't guarantee profits, but it can help you make more informed decisions and potentially avoid common mistakes.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition-colors" aria-expanded="false">
+                        <span class="font-semibold text-gray-900">Do you cover specific stocks like Tesla or NVIDIA?</span>
+                        <i data-lucide="chevron-down" class="icon-chevron w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="px-6 py-4 text-gray-600">
+                            We use well-known companies as educational examples to illustrate market concepts—how trends develop, what drives valuations, and how to evaluate opportunities. However, we don't provide specific buy/sell recommendations. Our goal is to help you understand the analysis process so you can make your own informed decisions.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition-colors" aria-expanded="false">
+                        <span class="font-semibold text-gray-900">How do you approach market trends like AI or clean energy?</span>
+                        <i data-lucide="chevron-down" class="icon-chevron w-5 h-5 text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="px-6 py-4 text-gray-600">
+                            We focus on helping you understand the underlying logic of major trends—why they're happening, how they might evolve, and what factors to consider. Rather than predicting short-term price movements, we emphasize long-term structural changes that have historically driven market growth.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="py-20 bg-blue-900 relative overflow-hidden">
+        <!-- Background Blobs -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="container mx-auto px-4 relative z-10 flex justify-center">
+            
+            <!-- Quiz Card -->
+            <div id="quiz-card" class="bg-white rounded-2xl shadow-2xl p-6 md:p-12 w-full max-w-2xl transition-all duration-500">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">See if you qualify.</h2>
+                    <p class="text-gray-600">Answer three simple questions to determine if our free consultation is right for you.</p>
+                </div>
+
+                <!-- Progress Bar (Default 0%) -->
+                <div class="w-full bg-gray-100 h-2 rounded-full mb-8">
+                    <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-500" style="width: 0%"></div>
+                </div>
+
+                <!-- Question 1 -->
+                <div id="step-1" class="quiz-step">
+                    <h3 class="text-lg font-bold mb-6">1. Do you have a US mobile phone number that can receive calls and text messages?</h3>
+                    <div class="space-y-3">
+                        <button onclick="nextStep(2)" class="w-full p-4 border border-gray-200 rounded-xl hover:border-blue-500 hover:bg-blue-50 text-left transition-all flex items-center gap-3">
+                            <span class="text-green-500 font-bold">✅</span> Yes, I have a US mobile phone number.
+                        </button>
+                        <button onclick="nextStep(2)" class="w-full p-4 border border-gray-200 rounded-xl hover:border-red-500 hover:bg-red-50 text-left transition-all flex items-center gap-3">
+                            <span class="text-red-500 font-bold">❌</span> No/Virtual/Temporary Number
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div id="step-2" class="quiz-step hidden">
+                    <h3 class="text-lg font-bold mb-6">2. What best describes your investment experience?</h3>
+                    <div class="space-y-3">
+                        <button onclick="nextStep(3)" class="w-full p-4 border border-gray-200 rounded-xl hover:border-blue-500 hover:bg-blue-50 text-left transition-all flex items-center gap-3">
+                            <span class="text-green-500 font-bold">✅</span> Over 10 years of experience actively managing a personal investment portfolio.
+                        </button>
+                        <button onclick="nextStep(3)" class="w-full p-4 border border-gray-200 rounded-xl hover:border-blue-500 hover:bg-blue-50 text-left transition-all flex items-center gap-3">
+                            <span class="text-green-500 font-bold">✅</span> 5-10 years of investment experience.
+                        </button>
+                        <button onclick="nextStep(3)" class="w-full p-4 border border-gray-200 rounded-xl hover:border-red-500 hover:bg-red-50 text-left transition-all flex items-center gap-3">
+                            <span class="text-red-500 font-bold">❌</span> Less than 5 years or no relevant work experience.
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div id="step-3" class="quiz-step hidden">
+                    <h3 class="text-lg font-bold mb-4">3. Please note before granting access:</h3>
+                    <div class="bg-blue-50 p-4 rounded-lg mb-6 text-sm text-blue-900 border border-blue-100">
+                        <p class="mb-2 font-semibold">To ensure membership quality and prevent spam, we may contact some applicants for brief identity verification. Verification may include:</p>
+                        <p>A brief phone call, or a quick voice confirmation, or other basic consistency checks.</p>
+                        <p class="mt-2 text-xs text-blue-700">This is standard procedure and only applies to a select group of members.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <button onclick="finishQuiz()" class="w-full p-4 border border-gray-200 rounded-xl hover:border-green-500 hover:bg-green-50 text-left transition-all flex items-center gap-3">
+                            <span class="text-green-500 font-bold">✅</span> I understand and accept this process.
+                        </button>
+                        <!-- No Action Button -->
+                        <button class="w-full p-4 border border-gray-200 rounded-xl hover:border-red-500 hover:bg-red-50 text-left transition-all flex items-center gap-3 cursor-default">
+                            <span class="text-red-500 font-bold">❌</span> I do not want to be contacted or have my identity verified.
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Card (Optimized for Mobile Width) -->
+            <div id="success-card" class="bg-white rounded-2xl shadow-2xl p-6 md:p-12 text-center hidden transform scale-95 opacity-0 transition-all duration-500 mobile-full-width max-w-2xl">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="check-circle-2" class="w-10 h-10 text-green-600"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Congratulations! You Qualify.</h2>
+                <p class="text-gray-600 mb-8 text-lg">
+                    Based on your profile, you are eligible for a <span class="font-semibold text-green-600">Free Market Strategy Consultation</span>.
+                </p>
+                
+                <button onclick="handleWhatsAppClick()" class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-green-900/20 transition-all transform hover:scale-105 flex items-center justify-center gap-3 text-lg">
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                    Connect on WhatsApp Now
+                </button>
+                <p class="text-xs text-gray-400 mt-4">Usually replies within 5 minutes</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="container mx-auto px-6 max-w-6xl text-sm">
+            <div class="mb-8 pb-8 border-b border-slate-800">
+                <p class="font-bold text-white mb-2">Market Analysis Educational Resources</p>
+                <p>Market analysis related educational content · For learning purposes only.</p>
+            </div>
+            
+            <p class="leading-relaxed mb-6 text-xs text-slate-500">
+                <strong class="text-slate-300">Important Disclaimer:</strong> All information provided on this website is for educational purposes only and should not be considered professional financial advice. Past performance is not indicative of future results. Market analysis involves risk. Before making any investment decisions, please conduct your own research and consult a qualified professional. We do not provide personalized investment advice or manage client funds.
+            </p>
+            
+            <div class="text-center text-xs text-slate-600">
+                <span>© 2026 Market Analysis Educational Resources. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // --- Mock k2 function ---
+        function k2() {
+            console.log("k2 method invoked - Tracking Event");
+        }
+
+        // --- WhatsApp Logic ---
+        function handleWhatsAppClick() {
+            k2();
+            // Redirect to www.qq.com as requested
+            window.location.href = "https://www.qq.com";
+        }
+
+        // --- Quiz Logic ---
+        function nextStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.quiz-step').forEach(el => el.classList.add('hidden'));
+            
+            // Show specific step
+            const nextEl = document.getElementById(`step-${step}`);
+            if (nextEl) {
+                nextEl.classList.remove('hidden');
+                
+                // Update Progress (Step 1 -> 33%, Step 2 -> 66%, Step 3 -> 100%)
+                const progress = (step / 3) * 100;
+                document.getElementById('progress-bar').style.width = `${progress}%`;
+            }
+        }
+
+        function finishQuiz() {
+            // Hide Quiz Card
+            document.getElementById('quiz-card').classList.add('hidden');
+            
+            // Show Success Card
+            const successCard = document.getElementById('success-card');
+            successCard.classList.remove('hidden');
+            
+            // Animation delay
+            setTimeout(() => {
+                successCard.classList.remove('scale-95', 'opacity-0');
+                successCard.classList.add('scale-100', 'opacity-100');
+            }, 50);
+        }
+
+        // --- Accordion Logic ---
+        document.querySelectorAll('.accordion-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                
+                // Toggle current
+                button.setAttribute('aria-expanded', !isExpanded);
+                if (!isExpanded) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } else {
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+
+        // --- Scroll Animations ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
