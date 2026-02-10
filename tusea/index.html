@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		      <meta property="og:title" content="I'll be waiting for you tonight">
-    <meta property="og:description" content="I'm waiting for you tonight, tonight's party, lonely young women, see you there">
-   
-    <meta property="og:type" content="webpage"> <!-- 可以是 article, website, video 等 -->
+		      <meta property="og:title" content="Bu gece seni bekliyorum">
+    <meta property="og:description" content="Bu gece seni bekliyorum, bu gecenin partisi, yalnız genç kadınlar, orada görüşürüz">
+    
+    <meta property="og:type" content="webpage">
 	
-    <title>Dating Community</title>
+    <title>Tanışma Topluluğu</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script>
-	    function openLine() { 
-            window.open("https://line.me/ti/p/~lhls4", "_blank");
+	    function openTelegram() { 
+            window.open("https://t.me/yourusername", "_blank");
+        }
+        
+        function openWhatsApp() { 
+            window.open("https://wa.me/1234567890", "_blank");
         }
 </script>
 	
@@ -754,7 +758,7 @@
         }
         
         .play-button::after {
-            content: "Watch Video";
+            content: "Videoyu İzle";
             position: absolute;
             bottom: -35px;
             left: 50%;
@@ -818,6 +822,10 @@
             overflow: hidden;
             font-size: 0.85rem;
             flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
         }
         
         .btn::after {
@@ -843,8 +851,12 @@
             transform: rotate(45deg) translateX(100%);
         }
         
-        .profile-btn-secondary {
-            background: linear-gradient(135deg, var(--primary-purple-light), var(--primary-purple));
+        .profile-btn-telegram {
+            background: linear-gradient(135deg, #0088cc, #0066A3);
+        }
+        
+        .profile-btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
         }
         
         /* CTA Section */
@@ -905,12 +917,12 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
-        .cta-line {
-            background: linear-gradient(135deg, #06C755, #04A346);
-        }
-        
         .cta-telegram {
             background: linear-gradient(135deg, #0088cc, #0066A3);
+        }
+        
+        .cta-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
         }
         
         /* Responsive Adjustments */
@@ -991,9 +1003,9 @@
             
             <div class="hero-content-wrapper">
                 <div class="hero-content">
-                    <h1 class="hero-title">Dating & Friend Finding, Companion Dating</h1>
-                    <p class="hero-subtitle">Opportunity to meet attractive female members in your area</p>
-                    <a href="#profiles" class="cta-button">Get Started Now</a>
+                    <h1 class="hero-title">Tanışma ve Arkadaş Bulma, Eş Bulma</h1>
+                    <p class="hero-subtitle">Bölgenizdeki çekici kadın üyelerle tanışma fırsatı</p>
+                    <a href="#profiles" class="cta-button">Hemen Başla</a>
                 </div>
                 
                 <!-- Map-style profile display -->
@@ -1024,56 +1036,56 @@
                     
                     <!-- Map profiles -->
                     <div class="map-profile" style="top: 30%; left: 35%;">
-                        <img src="img/1.jpg" alt="Profile" class="map-profile-image">
+                        <img src="img/1.jpg" alt="Profil" class="map-profile-image">
                         <div class="map-online-indicator"></div>
                         <div class="map-profile-info">Miyoung, 25</div>
                         <div class="map-distance">1.2km</div>
                     </div>
                     
                     <div class="map-profile" style="top: 55%; left: 65%;">
-                        <img src="img/2.jpg" alt="Profile" class="map-profile-image">
+                        <img src="img/2.jpg" alt="Profil" class="map-profile-image">
                         <div class="map-online-indicator"></div>
                         <div class="map-profile-info">Jihyun, 23</div>
                         <div class="map-distance">0.8km</div>
                     </div>
                     
                     <div class="map-profile" style="top: 70%; left: 40%;">
-                        <img src="img/3.jpg" alt="Profile" class="map-profile-image">
+                        <img src="img/3.jpg" alt="Profil" class="map-profile-image">
                         <div class="map-online-indicator"></div>
                         <div class="map-profile-info">Sujin, 26</div>
                         <div class="map-distance">1.7km</div>
                     </div>
                     
                     <div class="map-profile" style="top: 35%; left: 70%;">
-                        <img src="img/4.jpg" alt="Profile" class="map-profile-image">
+                        <img src="img/4.jpg" alt="Profil" class="map-profile-image">
                         <div class="map-online-indicator"></div>
                         <div class="map-profile-info">Eunji, 24</div>
                         <div class="map-distance">2.1km</div>
                     </div>
                     
                     <div class="map-profile" style="top: 25%; left: 55%;">
-                        <img src="img/5.jpg" alt="Profile" class="map-profile-image">
+                        <img src="img/5.jpg" alt="Profil" class="map-profile-image">
                         <div class="map-online-indicator"></div>
                         <div class="map-profile-info">Sora, 27</div>
                         <div class="map-distance">1.5km</div>
                     </div>
                     
                     <div class="map-profile" style="top: 75%; left: 75%;">
-                        <img src="img/6.jpg" alt="Profile" class="map-profile-image">
+                        <img src="img/6.jpg" alt="Profil" class="map-profile-image">
                         <div class="map-online-indicator"></div>
                         <div class="map-profile-info">Hana, 22</div>
                         <div class="map-distance">0.9km</div>
                     </div>
                     
                     <div class="map-profile" style="top: 65%; left: 20%;">
-                        <img src="img/1.jpg" alt="Profile" class="map-profile-image">
+                        <img src="img/1.jpg" alt="Profil" class="map-profile-image">
                         <div class="map-online-indicator"></div>
                         <div class="map-profile-info">Seoyeon, 25</div>
                         <div class="map-distance">1.3km</div>
                     </div>
                     
                     <div class="map-profile" style="top: 20%; left: 20%;">
-                        <img src="img/4.jpg" alt="Profile" class="map-profile-image">
+                        <img src="img/4.jpg" alt="Profil" class="map-profile-image">
                         <div class="map-online-indicator"></div>
                         <div class="map-profile-info">Jieun, 29</div>
                         <div class="map-distance">1.8km</div>
@@ -1084,24 +1096,24 @@
         
         <!-- Profiles Section -->
         <section id="profiles" class="profiles-section">
-            <h2 class="profiles-section-title">Popular Profiles Nearby</h2>
+            <h2 class="profiles-section-title">Yakınımdaki Popüler Profiller</h2>
             
             <div class="profiles-list">
                 <!-- Profile 1 -->
                 <div class="profile-item">
                     <div class="profile-image-side">
-                        <img src="img/1.jpg" alt="Profile Image" class="profile-main-image">
-                        <div class="profile-badge">Premium Verified</div>
+                        <img src="img/1.jpg" alt="Profil Resmi" class="profile-main-image">
+                        <div class="profile-badge">Premium Onaylı</div>
                         <div class="profile-online">
                             <span class="online-dot"></span>
-                            Online 6 minutes ago
+                            6 dakika önce çevrimiçiydi
                         </div>
                     </div>
                     <div class="profile-info-side">
                         <div class="profile-details-scroll">
                             <div class="profile-details">
-                                <div class="profile-detail"><i class="fas fa-user"></i> 25 years old</div>
-                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Student</div>
+                                <div class="profile-detail"><i class="fas fa-user"></i> 25 yaşında</div>
+                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Öğrenci</div>
                                 <div class="profile-detail"><i class="fas fa-map-marker-alt"></i> 1.2km</div>
                                 <div class="profile-detail"><i class="fas fa-ruler-vertical"></i> 162cm</div>
                             </div>
@@ -1109,24 +1121,24 @@
                         
                         <div class="profile-views">
                             <i class="fas fa-eye"></i>
-                            <div>Already <span class="view-count" data-count="1541">1541</span> people have checked her profile</div>
+                            <div>Zaten <span class="view-count" data-count="1541">1541</span> kişi profilini inceledi</div>
                         </div>
                         
                         <div class="profile-gallery">
                             <div class="gallery-thumb">
-                                <img src="img/1.jpg" alt="Gallery Image">
+                                <img src="img/1.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/1.jpg" alt="Gallery Image">
+                                <img src="img/1.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/1.jpg" alt="Gallery Image">
+                                <img src="img/1.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
@@ -1134,7 +1146,12 @@
                         </div>
                         
                         <div class="profile-buttons"> 
-                            <button class="btn profile-btn-secondary" onclick="scrollToContact()">View Her Profile</button>
+                            <button class="btn profile-btn-telegram" onclick="openTelegram()">
+                                <i class="fab fa-telegram-plane"></i> Telegram
+                            </button>
+                            <button class="btn profile-btn-whatsapp" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1142,18 +1159,18 @@
                 <!-- Profile 2 -->
                 <div class="profile-item">
                     <div class="profile-image-side">
-                        <img src="img/2.jpg" alt="Profile Image" class="profile-main-image">
-                        <div class="profile-badge">Premium Verified</div>
+                        <img src="img/2.jpg" alt="Profil Resmi" class="profile-main-image">
+                        <div class="profile-badge">Premium Onaylı</div>
                         <div class="profile-online">
                             <span class="online-dot"></span>
-                            Online 3 minutes ago
+                            3 dakika önce çevrimiçiydi
                         </div>
                     </div>
                     <div class="profile-info-side">
                         <div class="profile-details-scroll">
                             <div class="profile-details">
-                                <div class="profile-detail"><i class="fas fa-user"></i> 23 years old</div>
-                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Bank Manager</div>
+                                <div class="profile-detail"><i class="fas fa-user"></i> 23 yaşında</div>
+                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Banka Müdürü</div>
                                 <div class="profile-detail"><i class="fas fa-map-marker-alt"></i> 2.2km</div>
                                 <div class="profile-detail"><i class="fas fa-ruler-vertical"></i> 171cm</div>
                             </div>
@@ -1161,24 +1178,24 @@
                         
                         <div class="profile-views">
                             <i class="fas fa-eye"></i>
-                            <div>Already <span class="view-count" data-count="3121">3121</span> people have checked her profile</div>
+                            <div>Zaten <span class="view-count" data-count="3121">3121</span> kişi profilini inceledi</div>
                         </div>
                         
                         <div class="profile-gallery">
                             <div class="gallery-thumb">
-                                <img src="img/2.jpg" alt="Gallery Image">
+                                <img src="img/2.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/2.jpg" alt="Gallery Image">
+                                <img src="img/2.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/2.jpg" alt="Gallery Image">
+                                <img src="img/2.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
@@ -1186,7 +1203,12 @@
                         </div>
                         
                         <div class="profile-buttons"> 
-                            <button class="btn profile-btn-secondary" onclick="scrollToContact()">View Her Profile</button>
+                            <button class="btn profile-btn-telegram" onclick="openTelegram()">
+                                <i class="fab fa-telegram-plane"></i> Telegram
+                            </button>
+                            <button class="btn profile-btn-whatsapp" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1194,18 +1216,18 @@
                 <!-- Profile 3 -->
                 <div class="profile-item">
                     <div class="profile-image-side">
-                        <img src="img/3.jpg" alt="Profile Image" class="profile-main-image">
-                        <div class="profile-badge">Premium Verified</div>
+                        <img src="img/3.jpg" alt="Profil Resmi" class="profile-main-image">
+                        <div class="profile-badge">Premium Onaylı</div>
                         <div class="profile-online">
                             <span class="online-dot"></span>
-                            Online 7 minutes ago
+                            7 dakika önce çevrimiçiydi
                         </div>
                     </div>
                     <div class="profile-info-side">
                         <div class="profile-details-scroll">
                             <div class="profile-details">
-                                <div class="profile-detail"><i class="fas fa-user"></i> 26 years old</div>
-                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Nurse</div>
+                                <div class="profile-detail"><i class="fas fa-user"></i> 26 yaşında</div>
+                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Hemşire</div>
                                 <div class="profile-detail"><i class="fas fa-map-marker-alt"></i> 2.1km</div>
                                 <div class="profile-detail"><i class="fas fa-ruler-vertical"></i> 161cm</div>
                             </div>
@@ -1213,24 +1235,24 @@
                         
                         <div class="profile-views">
                             <i class="fas fa-eye"></i>
-                            <div>Already <span class="view-count" data-count="798">798</span> people have checked her profile</div>
+                            <div>Zaten <span class="view-count" data-count="798">798</span> kişi profilini inceledi</div>
                         </div>
                         
                         <div class="profile-gallery">
                             <div class="gallery-thumb">
-                                <img src="img/3.jpg" alt="Gallery Image">
+                                <img src="img/3.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/3.jpg" alt="Gallery Image">
+                                <img src="img/3.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/3.jpg" alt="Gallery Image">
+                                <img src="img/3.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
@@ -1238,25 +1260,30 @@
                         </div>
                         
                         <div class="profile-buttons"> 
-                            <button class="btn profile-btn-secondary" onclick="scrollToContact()">View Her Profile</button>
+                            <button class="btn profile-btn-telegram" onclick="openTelegram()">
+                                <i class="fab fa-telegram-plane"></i> Telegram
+                            </button>
+                            <button class="btn profile-btn-whatsapp" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
                         </div>
                     </div>
                 </div>
                  <!-- Profile 4 -->
                 <div class="profile-item">
                     <div class="profile-image-side">
-                        <img src="img/4.jpg" alt="Profile Image" class="profile-main-image">
-                        <div class="profile-badge">Premium Verified</div>
+                        <img src="img/4.jpg" alt="Profil Resmi" class="profile-main-image">
+                        <div class="profile-badge">Premium Onaylı</div>
                         <div class="profile-online">
                             <span class="online-dot"></span>
-                            Online 1 minute ago
+                            1 dakika önce çevrimiçiydi
                         </div>
                     </div>
                     <div class="profile-info-side">
                         <div class="profile-details-scroll">
                             <div class="profile-details">
-                                <div class="profile-detail"><i class="fas fa-user"></i> 27 years old</div>
-                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Yoga Instructor</div>
+                                <div class="profile-detail"><i class="fas fa-user"></i> 27 yaşında</div>
+                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Yoga Eğitmeni</div>
                                 <div class="profile-detail"><i class="fas fa-map-marker-alt"></i> 2.8km</div>
                                 <div class="profile-detail"><i class="fas fa-ruler-vertical"></i> 168cm</div>
                             </div>
@@ -1264,24 +1291,24 @@
                         
                         <div class="profile-views">
                             <i class="fas fa-eye"></i>
-                            <div>Already <span class="view-count" data-count="587">677</span> people have checked her profile</div>
+                            <div>Zaten <span class="view-count" data-count="587">677</span> kişi profilini inceledi</div>
                         </div>
                         
                         <div class="profile-gallery">
                             <div class="gallery-thumb">
-                                <img src="img/4.jpg" alt="Gallery Image">
+                                <img src="img/4.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/4.jpg" alt="Gallery Image">
+                                <img src="img/4.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/4.jpg" alt="Gallery Image">
+                                <img src="img/4.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
@@ -1289,25 +1316,30 @@
                         </div>
                         
                         <div class="profile-buttons"> 
-                            <button class="btn profile-btn-secondary" onclick="scrollToContact()">View Her Profile</button>
+                            <button class="btn profile-btn-telegram" onclick="openTelegram()">
+                                <i class="fab fa-telegram-plane"></i> Telegram
+                            </button>
+                            <button class="btn profile-btn-whatsapp" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
                         </div>
                     </div>
                 </div>
 				 <!-- Profile 5 -->
                 <div class="profile-item">
                     <div class="profile-image-side">
-                        <img src="img/8.jpg" alt="Profile Image" class="profile-main-image">
-                        <div class="profile-badge">Premium Verified</div>
+                        <img src="img/8.jpg" alt="Profil Resmi" class="profile-main-image">
+                        <div class="profile-badge">Premium Onaylı</div>
                         <div class="profile-online">
                             <span class="online-dot"></span>
-                            Online 1 minute ago
+                            1 dakika önce çevrimiçiydi
                         </div>
                     </div>
                     <div class="profile-info-side">
                         <div class="profile-details-scroll">
                             <div class="profile-details">
-                                <div class="profile-detail"><i class="fas fa-user"></i> 21 years old</div>
-                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Nurse</div>
+                                <div class="profile-detail"><i class="fas fa-user"></i> 21 yaşında</div>
+                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Hemşire</div>
                                 <div class="profile-detail"><i class="fas fa-map-marker-alt"></i> 1.6km</div>
                                 <div class="profile-detail"><i class="fas fa-ruler-vertical"></i> 161cm</div>
                             </div>
@@ -1315,24 +1347,24 @@
                         
                         <div class="profile-views">
                             <i class="fas fa-eye"></i>
-                            <div>Already <span class="view-count" data-count="587">235</span> people have checked her profile</div>
+                            <div>Zaten <span class="view-count" data-count="587">235</span> kişi profilini inceledi</div>
                         </div>
                         
                         <div class="profile-gallery">
                             <div class="gallery-thumb">
-                                <img src="img/8.jpg" alt="Gallery Image">
+                                <img src="img/8.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/8.jpg" alt="Gallery Image">
+                                <img src="img/8.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/8.jpg" alt="Gallery Image">
+                                <img src="img/8.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
@@ -1340,25 +1372,30 @@
                         </div>
                         
                         <div class="profile-buttons"> 
-                            <button class="btn profile-btn-secondary" onclick="scrollToContact()">View Her Profile</button>
+                            <button class="btn profile-btn-telegram" onclick="openTelegram()">
+                                <i class="fab fa-telegram-plane"></i> Telegram
+                            </button>
+                            <button class="btn profile-btn-whatsapp" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
                         </div>
                     </div>
                 </div>
 				 <!-- Profile 6 -->
                 <div class="profile-item">
                     <div class="profile-image-side">
-                        <img src="img/6.jpg" alt="Profile Image" class="profile-main-image">
-                        <div class="profile-badge">Premium Verified</div>
+                        <img src="img/6.jpg" alt="Profil Resmi" class="profile-main-image">
+                        <div class="profile-badge">Premium Onaylı</div>
                         <div class="profile-online">
                             <span class="online-dot"></span>
-                            Online 1 minute ago
+                            1 dakika önce çevrimiçiydi
                         </div>
                     </div>
                     <div class="profile-info-side">
                         <div class="profile-details-scroll">
                             <div class="profile-details">
-                                <div class="profile-detail"><i class="fas fa-user"></i> 25 years old</div>
-                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Yoga Instructor</div>
+                                <div class="profile-detail"><i class="fas fa-user"></i> 25 yaşında</div>
+                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Yoga Eğitmeni</div>
                                 <div class="profile-detail"><i class="fas fa-map-marker-alt"></i> 1.8km</div>
                                 <div class="profile-detail"><i class="fas fa-ruler-vertical"></i> 164cm</div>
                             </div>
@@ -1366,24 +1403,24 @@
                         
                         <div class="profile-views">
                             <i class="fas fa-eye"></i>
-                            <div>Already <span class="view-count" data-count="587">809</span> people have checked her profile</div>
+                            <div>Zaten <span class="view-count" data-count="587">809</span> kişi profilini inceledi</div>
                         </div>
                         
                         <div class="profile-gallery">
                             <div class="gallery-thumb">
-                                <img src="img/6.jpg" alt="Gallery Image">
+                                <img src="img/6.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/6.jpg" alt="Gallery Image">
+                                <img src="img/6.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/6.jpg" alt="Gallery Image">
+                                <img src="img/6.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
@@ -1391,25 +1428,30 @@
                         </div>
                         
                         <div class="profile-buttons"> 
-                            <button class="btn profile-btn-secondary" onclick="scrollToContact()">View Her Profile</button>
+                            <button class="btn profile-btn-telegram" onclick="openTelegram()">
+                                <i class="fab fa-telegram-plane"></i> Telegram
+                            </button>
+                            <button class="btn profile-btn-whatsapp" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
                         </div>
                     </div>
                 </div>
 				<!-- Profile 7 -->
                 <div class="profile-item">
                     <div class="profile-image-side">
-                        <img src="img/12.png" alt="Profile Image" class="profile-main-image">
-                        <div class="profile-badge">Premium Verified</div>
+                        <img src="img/12.png" alt="Profil Resmi" class="profile-main-image">
+                        <div class="profile-badge">Premium Onaylı</div>
                         <div class="profile-online">
                             <span class="online-dot"></span>
-                            Online 1 minute ago
+                            1 dakika önce çevrimiçiydi
                         </div>
                     </div>
                     <div class="profile-info-side">
                         <div class="profile-details-scroll">
                             <div class="profile-details">
-                                <div class="profile-detail"><i class="fas fa-user"></i> 21 years old</div>
-                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Nurse</div>
+                                <div class="profile-detail"><i class="fas fa-user"></i> 21 yaşında</div>
+                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Hemşire</div>
                                 <div class="profile-detail"><i class="fas fa-map-marker-alt"></i> 1.6km</div>
                                 <div class="profile-detail"><i class="fas fa-ruler-vertical"></i> 167cm</div>
                             </div>
@@ -1417,24 +1459,24 @@
                         
                         <div class="profile-views">
                             <i class="fas fa-eye"></i>
-                            <div>Already <span class="view-count" data-count="587">1233</span> people have checked her profile</div>
+                            <div>Zaten <span class="view-count" data-count="587">1233</span> kişi profilini inceledi</div>
                         </div>
                         
                         <div class="profile-gallery">
                             <div class="gallery-thumb">
-                                <img src="img/12.png" alt="Gallery Image">
+                                <img src="img/12.png" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/12.png" alt="Gallery Image">
+                                <img src="img/12.png" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/12.png" alt="Gallery Image">
+                                <img src="img/12.png" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
@@ -1442,25 +1484,30 @@
                         </div>
                         
                         <div class="profile-buttons"> 
-                            <button class="btn profile-btn-secondary" onclick="scrollToContact()">View Her Profile</button>
+                            <button class="btn profile-btn-telegram" onclick="openTelegram()">
+                                <i class="fab fa-telegram-plane"></i> Telegram
+                            </button>
+                            <button class="btn profile-btn-whatsapp" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
                         </div>
                     </div>
                 </div>
 				<!-- Profile 8 -->
                 <div class="profile-item">
                     <div class="profile-image-side">
-                        <img src="img/11.jpg" alt="Profile Image" class="profile-main-image">
-                        <div class="profile-badge">Premium Verified</div>
+                        <img src="img/11.jpg" alt="Profil Resmi" class="profile-main-image">
+                        <div class="profile-badge">Premium Onaylı</div>
                         <div class="profile-online">
                             <span class="online-dot"></span>
-                            Online 1 minute ago
+                            1 dakika önce çevrimiçiydi
                         </div>
                     </div>
                     <div class="profile-info-side">
                         <div class="profile-details-scroll">
                             <div class="profile-details">
-                                <div class="profile-detail"><i class="fas fa-user"></i> 21 years old</div>
-                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Yoga Instructor</div>
+                                <div class="profile-detail"><i class="fas fa-user"></i> 21 yaşında</div>
+                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Yoga Eğitmeni</div>
                                 <div class="profile-detail"><i class="fas fa-map-marker-alt"></i> 1.5km</div>
                                 <div class="profile-detail"><i class="fas fa-ruler-vertical"></i> 164cm</div>
                             </div>
@@ -1468,24 +1515,24 @@
                         
                         <div class="profile-views">
                             <i class="fas fa-eye"></i>
-                            <div>Already <span class="view-count" data-count="587">855</span> people have checked her profile</div>
+                            <div>Zaten <span class="view-count" data-count="587">855</span> kişi profilini inceledi</div>
                         </div>
                         
                         <div class="profile-gallery">
                             <div class="gallery-thumb">
-                                <img src="img/11.jpg" alt="Gallery Image">
+                                <img src="img/11.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/11.jpg" alt="Gallery Image">
+                                <img src="img/11.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/11.jpg" alt="Gallery Image">
+                                <img src="img/11.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
@@ -1493,25 +1540,30 @@
                         </div>
                         
                         <div class="profile-buttons"> 
-                            <button class="btn profile-btn-secondary" onclick="scrollToContact()">View Her Profile</button>
+                            <button class="btn profile-btn-telegram" onclick="openTelegram()">
+                                <i class="fab fa-telegram-plane"></i> Telegram
+                            </button>
+                            <button class="btn profile-btn-whatsapp" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
                         </div>
                     </div>
                 </div>
                 <!-- Profile 9 -->
                 <div class="profile-item">
                     <div class="profile-image-side">
-                        <img src="img/7.jpg" alt="Profile Image" class="profile-main-image">
-                        <div class="profile-badge">Premium Verified</div>
+                        <img src="img/7.jpg" alt="Profil Resmi" class="profile-main-image">
+                        <div class="profile-badge">Premium Onaylı</div>
                         <div class="profile-online">
                             <span class="online-dot"></span>
-                            Online 1 minute ago
+                            1 dakika önce çevrimiçiydi
                         </div>
                     </div>
                     <div class="profile-info-side">
                         <div class="profile-details-scroll">
                             <div class="profile-details">
-                                <div class="profile-detail"><i class="fas fa-user"></i> 23 years old</div>
-                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Yoga Instructor</div>
+                                <div class="profile-detail"><i class="fas fa-user"></i> 23 yaşında</div>
+                                <div class="profile-detail"><i class="fas fa-briefcase"></i> Yoga Eğitmeni</div>
                                 <div class="profile-detail"><i class="fas fa-map-marker-alt"></i> 1.7km</div>
                                 <div class="profile-detail"><i class="fas fa-ruler-vertical"></i> 162cm</div>
                             </div>
@@ -1519,24 +1571,24 @@
                         
                         <div class="profile-views">
                             <i class="fas fa-eye"></i>
-                            <div>Already <span class="view-count" data-count="587">1287</span> people have checked her profile</div>
+                            <div>Zaten <span class="view-count" data-count="587">1287</span> kişi profilini inceledi</div>
                         </div>
                         
                         <div class="profile-gallery">
                             <div class="gallery-thumb">
-                                <img src="img/7.jpg" alt="Gallery Image">
+                                <img src="img/7.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/7.jpg" alt="Gallery Image">
+                                <img src="img/7.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
                             <div class="gallery-thumb">
-                                <img src="img/7.jpg" alt="Gallery Image">
+                                <img src="img/7.jpg" alt="Galeri Resmi">
                                 <div class="play-button" onclick="scrollToContact()">
                                     <i class="fas fa-play"></i>
                                 </div>
@@ -1544,7 +1596,12 @@
                         </div>
                         
                         <div class="profile-buttons"> 
-                            <button class="btn profile-btn-secondary" onclick="scrollToContact()">View Her Profile</button>
+                            <button class="btn profile-btn-telegram" onclick="openTelegram()">
+                                <i class="fab fa-telegram-plane"></i> Telegram
+                            </button>
+                            <button class="btn profile-btn-whatsapp" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1553,11 +1610,16 @@
         
         <!-- CTA Section -->
         <section class="cta-section" id="contact-section">
-            <h2 class="cta-title">Feeling lonely? Meet singles nearby!</h2>
+            <h2 class="cta-title">Yalnız mı hissediyorsun? Yakınındaki bekarlarla tanış!</h2>
             <div class="cta-buttons">
-                <button class="btn cta-btn cta-line" onclick="openLine()"> Telegram</button> 
+                <button class="btn cta-btn cta-telegram" onclick="openTelegram()">
+                    <i class="fab fa-telegram-plane"></i> Telegram
+                </button>
+                <button class="btn cta-btn cta-whatsapp" onclick="openWhatsApp()">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </button>
             </div>
-            <p style="color: white; margin-top: 1.5rem; font-size: 1rem; text-shadow: 0 1px 3px rgba(0,0,0,0.2);">Send "2025" and we'll give you priority guidance</p>
+            <p style="color: white; margin-top: 1.5rem; font-size: 1rem; text-shadow: 0 1px 3px rgba(0,0,0,0.2);">"2025" gönderin ve size öncelikli rehberlik verelim</p>
         </section>
         
         <!-- Social Proof Notification -->
@@ -1616,11 +1678,11 @@
         document.addEventListener('DOMContentLoaded', function() {
             // First notification after 4 seconds
             setTimeout(() => {
-                showNotification('1 minute ago, 29 people already succeeded in booking');
+                showNotification('1 dakika önce, 29 kişi zaten başarıyla rezervasyon yaptı');
                 
-                // Second notification 10 seconds after the first one (changed from 5 to 10)
+                // Second notification 10 seconds after the first one
                 setTimeout(() => {
-                    showNotification('2 minutes ago, 66 people already succeeded in booking');
+                    showNotification('2 dakika önce, 66 kişi zaten başarıyla rezervasyon yaptı');
                 }, 10000);
             }, 4000);
             
